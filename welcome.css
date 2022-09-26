@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+}
+body{
+    width: 100%;
+    height: 100%;
+    /* background-color: yellowgreen; */
+    background-attachment: fixed;
+    background-image: url(wwww.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+}
+  
+li , a , button {
+    /* font-size: 1rem; */
+    text-decoration: none;
+}
+/* header */
+header{
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0; 
+    z-index: 1;
+}
+/* start navbar */
+.navbar{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 80px;
+    background: rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(7px);
+}
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.navbar .menubar span{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+ .navbar ul {
+    display: flex;
+ }
+.navbar ul li {
+    margin-left: 30px;
+    font-size: 1.063rem;
+    list-style: none;
+}
+.navbar ul a li {
+    color: white;
+    position: relative;
+}
+.navbar ul a li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    border-radius: 15px;
+    transition: width 0.3s;
+}
+.navbar ul a li:hover{
+    color: black;
+}
+.navbar ul a li:hover::after{
+    color: white;
+    width: 100%;
+}
+
+ /* end navbar */
+/* start */
+ .cent {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(7px);
+    border-radius: 1rem;
+    box-shadow: 0px 0px 16px 0px rgba(226, 225, 225, 0.577);
+    width: 500px;
+    height: 70px; 
+    margin: 140px auto;
+    flex-flow: column;
+    text-align: center;
+}
+
+.cent h1{
+    padding: 6px;
+    color: white; 
+    line-height: 1.5;
+    letter-spacing: 0.188rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
