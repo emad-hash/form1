@@ -15,7 +15,6 @@ if (isset($_POST['submit'])) {
 	$password = md5($_POST['password']);
 	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 	$result = mysqli_query($conn, $sql);
-
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
 		$_SESSION['username'] = $row['username'];
@@ -23,6 +22,8 @@ if (isset($_POST['submit'])) {
 	} else {
 		echo "<script>alert('Woops! Email Atau Password anda Salah.')</script>";
 	}
+	$t_sql = "UPDATE users SET lastlogin=CURRENT_TIMESTAMP WHERE email = '$email'";
+    $t_result = mysqli_query($conn,$t_sql); 
 }
 
 ?>

@@ -52,6 +52,7 @@ if(mysqli_num_rows($query_run) > 0) {
 <td><?= $Admin['password']; ?></td>
 <td><?= $Admin['mobile']; ?></td>
 <td><?= $Admin['DateofBirth']; ?></td>
+<td><?= $Admin['DateofBirth']; ?></td>
 
 <td>
 <a href="update.php?id=<?= $Admin['id']; ?>" class="btn btn-success btn-sm">Edit</a>

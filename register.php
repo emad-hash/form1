@@ -17,8 +17,8 @@ if (isset($_POST['submit'])) {
 	$cpassword = md5($_POST['cpassword']);
 	$mo = $_POST['mobile'];
 	$date = $_POST['DateofBirth'];
-	
     
+
 
 	if ($password == $cpassword) {
 		$sql = "SELECT * FROM users WHERE email='$email'";
