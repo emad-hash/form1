@@ -34,7 +34,7 @@ if(isset($_POST['update']))
     $mobile = mysqli_real_escape_string($conn, $_POST['mobile']);
     $DateofBirth = mysqli_real_escape_string($conn, $_POST['DateofBirth']);
 
-    $query = "UPDATE users SET username='$username', email='$email', password='$password', mobile='$mobile' , DateofBirth='$DateofBirth' WHERE id='$Admin_id' ";
+    $query = "UPDATE users SET username='$username', email='$email', password='$password', mobile='$mobile', DateofBirth='$DateofBirth' WHERE email='$email' ";
     $query_run = mysqli_query($conn, $query);
 
     if($query_run)

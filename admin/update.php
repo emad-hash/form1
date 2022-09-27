@@ -37,7 +37,7 @@ if(mysqli_num_rows($query_run) > 0)
 {
 $Admin = mysqli_fetch_array($query_run);
 ?>
-<form action="php.php" method="POST">
+<form action="./php.php" method="POST">
 <input type="text" name="username" value="<?=$Admin['username'];?>">
 <div class="mb-3">
 <input type="email" name="email" value="<?=$Admin['email'];?>" class="form-control">
@@ -49,10 +49,10 @@ $Admin = mysqli_fetch_array($query_run);
 <input type="number" name="mobile" value="<?=$Admin['mobile'];?>" class="form-control">
 </div>
 <div class="mb-3">
-<input type="text" name="Address" value="<?=$Admin['DateofBirth'];?>" class="form-control">
+<input type="text" name="DateofBirth" value="<?=$Admin['DateofBirth'];?>" class="form-control">
 </div>
 <div class="mb-3">
-<button type="submit" name="update" class="btn btn-primary">Update </button>
+<button type="submit" name="update" class="btn btn-primary">Update</button>
 </div>
 </form>
 <?php
